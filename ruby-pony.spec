@@ -5,19 +5,19 @@
 %define	pkgname	pony
 Summary:	The express way to send mail from Ruby
 Name:		ruby-%{pkgname}
-Version:	1.5
+Version:	1.5.1
 Release:	1
 License:	MIT
 Group:		Development/Languages
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
-# Source0-md5:	9346458b526468675c345f2e9311b2a2
+# Source0-md5:	8a3627564e2254c0bcae29eb536ad778
 URL:		http://github.com/benprew/pony
 BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.656
 %if %{with tests}
 BuildRequires:	ruby-rspec >= 2.0.0
 %endif
-Requires:	ruby-mail > 2.0
+Requires:	ruby-mail >= 2.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
